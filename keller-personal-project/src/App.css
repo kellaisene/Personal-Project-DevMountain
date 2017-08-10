@@ -1,0 +1,64 @@
+.App {
+  /*display: flex;
+  align-items: space-between;
+  justify-content: space-around;
+  flex-direction: column;*/
+  text-align: center;
+  background-image: url(https://cdn.gearpatrol.com/wp-content/uploads/2016/06/gear-patrol-stop-doing-this-at-gym-lead-full.jpg);
+  background-size: cover;
+  /*background: fixed;*/
+  font-family: sans-serif;
+  font-size: 38px;
+  height: 1000px;
+}
+
+/*.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}*/
+
+.btn-margin {
+  margin: 7px 3px;
+}
+
+
+.App-header {
+  width: 100%;
+  /*list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;*/
+  /*position: fixed;*/
+  float: none;
+  background-color: #222;
+  height: 50px;
+  /*padding: 20px;*/
+  color: white;
+}
+
+nav{
+  /*position: fixed;*/
+}
+
+ul{
+  /*position: fixed;*/
+  margin-top: 0px;
+  padding-left: 0px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-between;
+}
+
+
+.App-intro {
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 42px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
