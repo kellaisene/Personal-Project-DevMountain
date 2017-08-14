@@ -31,6 +31,39 @@
         
       </div>
 
+//-------------------------
+
+const express = require('express');
+const session = require('express-session');
+const passport = require('passport');
+const Auth = require('passport-auth0');
+const cors = require('cors');
+const bodyParser = require('body-parser')
+;
+
+const app = express();
+const keys = require('./server/keys');
+const massive = require('massive');
+const controller = require('./server/controllers/controllers');
+
+const connectionString = keys.address;
+
+const corsOptions = {
+  origin: 'http://localhost:3000',
+  credentials: true,
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+
+app.use(cors(corsOptions));
+app.use(bodyParser.json());
+app.use(session({
+  secret: 'dsadsfgdsdfsdffghio',
+  resave: true,
+  saveUninitialized: true,
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 massive(connectionString).then((db) => {
   app.set('db', db);
@@ -60,7 +93,7 @@ massive(connectionString).then((db) => {
   })
   ));
 
-    passport.serializeUser((profileToSession, done) => {
+  passport.serializeUser((profileToSession, done) => {
     console.log('serialize');
     done(null, profileToSession);// puts argument on session
   });

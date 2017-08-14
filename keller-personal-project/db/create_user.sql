@@ -1,0 +1,1 @@
+INSERT INTO User ( email, name, given_name, family_name, picture  ) VALUES ( $1, $2, $3, $4, $5 );

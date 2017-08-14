@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
+import {HashRouter, Route, Link, Switch} from 'react-router-dom';
 import logo from './logo.svg';
+import Profile from './Profile';
+import Welcome from './Welcome';
+import Workouts from './Workouts';
+import Results from './Results';
+import Meals from './Meals';
 import './App.css';
+import router from './router';
 
 // import './server';
 
@@ -9,40 +16,35 @@ class App extends Component {
 
   render() { 
     return (
-
+      <HashRouter>
       <div className="App">
         <div className="App-header">
-          <nav>
+          <nav className="nav-bar">
             <ul>
-              <li>My Workouts</li>
-              <li>Results Tracker</li>
-              <li>Meal Plans</li>
+              <Link to='/profile'>Profile</Link>
+              <Link to='/results'>Results Tracker</Link>
+              <Link to='/meals'>Meal Plans</Link>
             </ul>
           </nav>
-          {/*<img src={logo} className="App-logo" alt="logo" />*/}
-          {/*<h2>This is only the beginning</h2>*/}
+          <div>
+            <Route  path='/profile' component={Profile} />  
+
+           <Switch> 
+             {/* <Route path='/workouts' component={Workouts} />  */}
+             <Route path='/results' component={Results} />
+             <Route path='/meals' component={Meals} />  
+            </Switch> 
+          </div>
         </div>
        
-        <p className="App-intro">
+         <p className="App-intro">
           Welcome to your online Personal Trainer
-          <a href="http://localhost:3005/auth"> Login </a>
-          {/*<a href="{process.env.REACT_APP_BASEURL}/auth/login"> Login </a>
-          <br/>
-          <a href="{process.env.REACT_APP_BASEURL}/auth/logout"> Logout </a>*/}
-          {/*<br/>
-          Notice I cannot get the port enviroment variable,
-          This is safety measure from React to make sure they dont get variables
-          they dont want you to have access to
-          -- {process.env.PORT} --
-          <br/>
-          We can get the NODE_ENV property -- {process.env.NODE_ENV} --
-          <br/>
-          Or anything that starts with REACT_APP_ -- {process.env.REACT_APP_JUST_BECAUSE} --
-          <br/>*/}
-        </p>
-        
+          <p>
+          <a href="http://localhost:3005/auth"><button className="log-me-in"> Login</button></a>
+          </p>
+        </p>  
       </div>
-      
+      </HashRouter>
     );
   }
 }
@@ -51,3 +53,5 @@ class App extends Component {
     
 
 export default App;
+
+// {this.state.loggedin ? "someclass" : "someotherclass"}

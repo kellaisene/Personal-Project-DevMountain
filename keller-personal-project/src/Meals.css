@@ -1,0 +1,11 @@
+.results-page {
+    height: 1000px;
+    width: 100%;
+
+}
+
+.results-header {
+    height: 200px;
+    width: 100%;
+    background-color: blue;
+}

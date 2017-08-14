@@ -9,11 +9,11 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 // const strategy = require(`${__dirname}/strategy.js`)
 // const keys = require('./keys');
+const connectionString = 'postgres://jbahrlgj:bhiGKXQN-tzrNQTAlT3rbtXTIYWMIKWU@stampy.db.elephantsql.com:5432/jbahrlgj';
 
 
 
-const app = express();
-// const keys = require('./server/keys');
+const app = module.exports = express();
 const massive = require('massive');
 // const controller = require('./server/controllers/controllers')
 app.use(cors());
@@ -43,7 +43,7 @@ passport.use(new Auth0Strategy({
 
 
 passport.serializeUser((user, done) => {
-  console.log('made it')
+  // console.log('made it')
   done(null, user);
 });
 
@@ -54,7 +54,7 @@ passport.deserializeUser((obj, done) => {
 
 app.get('/auth', passport.authenticate('auth0'));
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:3000/',
+    successRedirect: 'http://localhost:3000/#/profile',
   }));
 app.get('/me', (req, res) => {
   console.log(req.user, 'this is req.user');
@@ -80,11 +80,22 @@ app.get('/me', (req, res, next) => {
   }
 });
 
-const port = 3005;
-massive('postgres://jbahrlgj:bhiGKXQN-tzrNQTAlT3rbtXTIYWMIKWU@stampy.db.elephantsql.com:5432/jbahrlgj').then((db) => {
+
+massive(connectionString).then((db) => {
   app.set('db', db);
 
+  // app.get('/api/user', controller.getUserProfile);
+  // app.put('/api/editprofile', controller.updateProfile);
+  // app.post('/api/createTrip', controller.createTrip);
+  // app.get('/api/viewTrip', controller.viewTrip);
+  // app.post('/api/squad', controller.CreateSquad);
+  // app.get('/api/squadInfo', controller.displaySquadInfo);
+  // app.put('/api/updateSquad', controller.updateCurrentSquad);
+  // app.get('/api/getPastSquad', controller.getPastSquad);
+  // app.delete('/api/removeTrip/:id', controller.removeTrip);
+  // app.delete('/api/removeSquad/:id', controller.removeSquad);
 
+const port = 3005;
   app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
   });
