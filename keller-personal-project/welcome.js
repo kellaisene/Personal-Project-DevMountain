@@ -81,7 +81,7 @@ massive(connectionString).then((db) => {
       user = user[0];
       if (!user) { // if there isn't one, we'll create one!
         console.log('CREATING USER', profile);
-        db.createUserByAuthID([profile.name.givenName, profile.name.familyName, profile.id, profile.emails[0].value]).then((createdUser) => {
+        db.createUserByAuthID([profile.emails[0].value, profile.displayName, profile.name.givenName, profile.name.familyName, profile.picture, profile.id]).then((createdUser) => {
           console.log('USER CREATED', createdUser);
           return done(null, createdUser[0]); // GOES TO SERIALIZE USER
         }).catch(err => console.log(err));

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {HashRouter, Route, Link, Switch} from 'react-router-dom';
+import axios from 'axios';
 import logo from './logo.svg';
 import Profile from './Profile';
 import Welcome from './Welcome';
@@ -9,11 +10,28 @@ import Meals from './Meals';
 import './App.css';
 import router from './router';
 
-// import './server';
+// import server from './server';
 
 
 class App extends Component {
 
+  constructor(){
+    super();
+    this.state = {
+      loggedin: []
+    };
+  }
+
+    componentDidMount() {
+      axios.get('/getuser')
+      .then( (response) => {
+        console.log('response', response)
+        this.setState({
+          loggedin: response.data
+        })
+      })
+      
+    }
   render() { 
     return (
       <HashRouter>
@@ -35,8 +53,9 @@ class App extends Component {
              <Route path='/meals' component={Meals} />  
             </Switch> 
           </div>
+
         </div>
-       
+        <div style={{display: this.state.loggedin ? "none" : "block"}}>
          <p className="App-intro">
           Welcome to your online Personal Trainer
           <p>
@@ -44,6 +63,8 @@ class App extends Component {
           </p>
         </p>  
       </div>
+      </div>
+
       </HashRouter>
     );
   }
