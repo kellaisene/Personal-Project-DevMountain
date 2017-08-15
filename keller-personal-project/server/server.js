@@ -16,6 +16,8 @@ const connectionString = process.env.CONNECTION_STRING;
 const app = module.exports = express();
 const massive = require('massive');
 // const controller = require('./server/controllers/controllers')
+
+
 app.use(cors());
 app.use(bodyParser.json());
 
@@ -89,9 +91,14 @@ app.get('/getuser', (req, res) => {
       // console.log('req.user', req.user)
 
   if(req.user){
+      var user = {
+        'user_id': req.user.user_id,
+        'name': req.user.name,
+        'profile_pic': req.user.imageurl
+      }
     console.log('req.user', req.user.user_id)
 
-    res.status(200).json(req.user.user_id)
+    res.status(200).json(user)
   }else{
     // console.log('not logged in')
     res.status(200).send(false);
