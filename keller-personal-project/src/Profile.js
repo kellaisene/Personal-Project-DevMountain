@@ -9,9 +9,11 @@ export default function Profile(props) {
     return (
         <div className="profile-page">
             <div className="profile-pic">
-                <img src={props.profile_pic} />
+                <img src={props.profile_pic} 
+                    height={200}
+                    width={200}/>
 
-                <h1 className="page-header">{props.name}</h1>
+                <h5 className="page-header">{props.name}</h5>
             </div>
         <div className="links">
         <div className="box1"></div>
