@@ -5,61 +5,88 @@
   font-size: 42px;
   color: black;
   /* background-image: url('http://www.superiorwallpapers.com/download/dumbbells-in-a-gym-1920x1200.jpg'); */
-  background-size: cover; 
+  background-size: cover;
   text-align: center;
-  color: white;
-
-}
+  color: white; }
 
 .profile-pic {
-    width: 100%;
-    height: 260px;
-     background-color: grey;
-      
-}
+  width: 100%;
+  height: 260px;
+  background-image: url(http://www.crossfitnp.cz/sites/default/files/images/cinka.png);
+  background-size: cover; }
 
 .page-header {
-    margin: 0px;
-}
+  margin: 0px; }
 
 .links {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 40px;
-}
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px; }
 
 .box1 {
-    height: 400px;
-    width: 400px;
-    background: lightgray;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+  background: lightgray;
+  border: 1px solid black; }
+
+.circle1 {
+  height: 250px;
+  width: 250px;
+  background-image: url(http://icons.iconarchive.com/icons/icons8/ios7/128/Sports-Dumbbell-icon.png);
+  background-size: cover; }
+
+.start-workout {
+  display: flex;
+  align-items: flex-end;
+  font-size: 20px; }
 
 .box2 {
-    height: 400px;
-    width: 400px;
-    background: lightgray;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+  background: lightgray;
+  border: 1px solid black; }
+
+.circle2 {
+  height: 250px;
+  width: 250px;
+  background-image: url(https://www.shareicon.net/download/2016/09/01/822140_measure_512x512.png);
+  background-size: cover; }
+
+.update-measurements {
+  font-size: 20px; }
 
 .box3 {
-    height: 400px;
-    width: 400px;
-    background: lightgray;
-    /* margin-top: 40px; */
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+  background: lightgray;
+  border: 1px solid black; }
 
-.box4 {
-    height: 400px;
-    width: 400px;
-    background: lightgray;
-    /* margin-top: 40px; */
+.circle3 {
+  height: 250px;
+  width: 250px;
+  background-image: url(https://goshiart.files.wordpress.com/2014/10/camera-logo-512.png?w=300);
+  background-size: cover; }
 
-}
+.add-pic {
+  font-size: 20px; }
 
 .recent-activity {
-    height: 700px;
-    width: 1200px;
-    background: darkgray;
-    margin-top: 100px;
-
-}
+  height: 700px;
+  width: 1200px;
+  background: darkgray;
+  margin-top: 100px;
+  border: 1px solid black; }

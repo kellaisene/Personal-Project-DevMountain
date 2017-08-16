@@ -4,19 +4,23 @@
   justify-content: space-around;
   flex-direction: column;*/
   text-align: center;
-  background-image: url(https://cdn.gearpatrol.com/wp-content/uploads/2016/06/gear-patrol-stop-doing-this-at-gym-lead-full.jpg);
+  background-image: url(https://cdn.gearpatrol.com/wp-content/uploads/2016/06/gear-patrol-stop-doing-this-at-gym-lead-full.jpg);  
   background-size: cover;
   /*background: fixed;*/
   font-family: sans-serif;
   font-size: 30px;
-  height: 1000px; }
+  height: 1000px;
+}
 
 /*.App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }*/
+
 .btn-margin {
-  margin: 7px 3px; }
+  margin: 7px 3px;
+}
+
 
 .App-header {
   width: 100%;
@@ -28,12 +32,15 @@
   float: none;
   background-color: #222;
   height: 50px;
-  /*padding: 20px;*/ }
+  /*padding: 20px;*/
+  
+}
 
-nav {
-  /*position: fixed;*/ }
+nav{
+  /*position: fixed;*/
+}
 
-ul {
+ul{
   /*position: fixed;*/
   margin-top: 0px;
   margin-bottom: 15px;
@@ -43,20 +50,24 @@ ul {
   flex-direction: row;
   justify-content: space-around;
   align-content: space-between;
-  color: white; }
+  color: white;
+}
 
 .loggedIn {
-  display: none; }
+  display: none;
+}
 
 .loggedOut {
-  display: block; }
+  display: block;
+}
 
 .App-intro {
   font-family: sans-serif;
   font-weight: 800;
   font-size: 42px;
   padding-top: 300px;
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 .log-me-in {
   height: 50px;
@@ -64,10 +75,11 @@ ul {
   background-color: lightskyblue;
   font-family: 'Muli', sans-serif;
   /* font-weight: 800; */
-  font-size: 28px; }
+  font-size: 28px;
+}
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+

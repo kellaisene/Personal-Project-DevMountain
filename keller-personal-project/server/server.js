@@ -90,7 +90,7 @@ app.get('/me', (req, res) => {
 app.get('/getuser', (req, res) => {
       // console.log('req.user', req.user)
 
-  if(req.user){
+  if(req.user){//creating an object for us to call and use
       var user = {
         'user_id': req.user.user_id,
         'name': req.user.name,

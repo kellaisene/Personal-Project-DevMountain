@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import {HashRouter, Route, Link, Switch} from 'react-router-dom';
+import {HashRouter as Router, Route, Link, Switch} from 'react-router-dom';
 import axios from 'axios';
 import logo from './logo.svg';
 import Home from './Home';
 import Profile from './Profile';
 import Welcome from './Welcome';
 import Workouts from './Workouts';
+import Measurements from './Measurements';
 import Results from './Results';
 import Meals from './Meals';
-import './App.css';
+// import './App.css';
 import router from './router';
 
 // import server from './server';
@@ -35,7 +36,7 @@ class App extends Component {
     }
   render() { 
     return (
-      <HashRouter>
+      <Router>
       <div style={{background: this.state.loggedin ? "none" : true}}className="App">
         <div style={{display: this.state.loggedin ? "block" : "none"}} className="App-header">
           <div className="nav-bar">
@@ -50,17 +51,19 @@ class App extends Component {
               
 
         </div>
-               <Route exact path='/home' component={Home} />  
+                <Route exact path='/home' component={Home} />   
            <Switch> 
-               <Route path='/profile' render={(props) => (
+                <Route exact path='/profile' render={(props) => (
                  <Profile {...props} 
                       profile_pic={this.state.loggedin.profile_pic}
                       name={this.state.loggedin.name} 
+                      gender={this.state.loggedin.gender}
                       />
-               )} />
-             {/* <Route path='/workouts' component={Workouts} />  */}
-             <Route path='/results' component={Results} />
-             <Route path='/meals' component={Meals} />  
+                      )} /> 
+                <Route path='/profile/workouts' component={Workouts} /> 
+                <Route path='/profile/measurements' component={Measurements} /> 
+                <Route path='/results' component={Results} />
+                <Route path='/meals' component={Meals} />   
             </Switch> 
           </div>
 
@@ -74,7 +77,7 @@ class App extends Component {
       </div>    
       </div>
 
-      </HashRouter>
+      </Router>
     );
   }
 }

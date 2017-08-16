@@ -1,0 +1,53 @@
+.workout-page {
+    height: 1050px;
+    width: 100%;
+    background-image: url(https://prod-academy-wp-content-uploads.s3.amazonaws.com/2015/12/Onnit-Academy-Workout-of-the-Day-37-Kettlebell-Workout.jpg)
+
+}
+
+.workout-header {
+    height: 160px;
+    width: 100%;
+    margin-top: -25px;
+    color: white;
+}
+
+.boxes {
+    display: flex;
+    justify-content: center; 
+}
+
+h5{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.input-boxes {
+    width: 1500px;
+    height: 800px;
+    background: rgba(255, 255,255, 0.7);
+    
+}
+
+// .workout-summary {
+//     width: 700px;
+//     height: 300px;
+//     background: rgba(255, 255,255, 0.9)
+// }
+
+.backbutton-format {
+    display: flex;
+    justify-content: center;
+}
+
+.back-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    background: red;
+    margin-top: 20px;
+}

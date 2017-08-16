@@ -1,11 +1,8 @@
 .results-page {
-    height: 1000px;
-    width: 100%;
-
-}
+  height: 1000px;
+  width: 100%; }
 
 .results-header {
-    height: 200px;
-    width: 100%;
-    background-color: blue;
-}
+  height: 200px;
+  width: 100%;
+  background-color: blue; }
