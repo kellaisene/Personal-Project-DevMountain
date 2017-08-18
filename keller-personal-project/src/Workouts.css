@@ -1,5 +1,5 @@
 .workout-page {
-  height: 1050px;
+  height: 1200px;
   width: 100%;
   background-image: url(https://prod-academy-wp-content-uploads.s3.amazonaws.com/2015/12/Onnit-Academy-Workout-of-the-Day-37-Kettlebell-Workout.jpg); }
 
@@ -21,7 +21,7 @@ h5 {
 
 .input-boxes {
   width: 1500px;
-  height: 800px;
+  height: 900px;
   background: rgba(255, 255, 255, 0.7); }
 
 .backbutton-format {

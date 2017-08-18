@@ -1,1 +1,0 @@
-INSERT INTO cardio ( id, user_id, total_time, Resistance/heartrate, speed, distance, timeCompleted  ) VALUES ( $1, $2, $3, $4, $5, $6, $7 );

@@ -14,13 +14,18 @@ import router from './router';
 
 // import server from './server';
 
+// import 'bootstrap/dist/css/bootstrap.css';
+// import ReactDataGrid from 'react-data-grid/addons';
+// var React = require('react');
+// var ReactDataGrid = require('react-data-grid/addons');
 
 class App extends Component {
 
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
-      loggedin: []
+      loggedin: [],
+      weights: {}
     };
   }
 
@@ -35,6 +40,9 @@ class App extends Component {
       
     }
   render() { 
+    // const weights = this.props.weights.map((weight, i) => (
+    //   <div key={i}>{weight.name}</div>
+    // ))
     return (
       <Router>
       <div style={{background: this.state.loggedin ? "none" : true}}className="App">
@@ -60,7 +68,11 @@ class App extends Component {
                       gender={this.state.loggedin.gender}
                       />
                       )} /> 
-                <Route path='/profile/workouts' component={Workouts} /> 
+                <Route path='/profile/workouts' render={(props) => (
+                 <Workouts {...props} 
+                      user_id={this.state.loggedin.user_id}
+                      />
+                      )} />  
                 <Route path='/profile/measurements' component={Measurements} /> 
                 <Route path='/results' component={Results} />
                 <Route path='/meals' component={Meals} />   
@@ -88,3 +100,7 @@ class App extends Component {
 export default App;
 
 // {this.state.loggedin ? "someclass" : "someotherclass"}
+{/* <Route path='/profile/workouts' render={(props) => (
+                  <Workouts {...props}
+                      name={this.state.name} /> 
+                )}/> */}

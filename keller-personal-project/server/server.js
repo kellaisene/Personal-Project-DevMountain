@@ -10,12 +10,15 @@ const bodyParser = require('body-parser');
 // const strategy = require(`${__dirname}/strategy.js`)
 // const keys = require('./keys');
 const connectionString = process.env.CONNECTION_STRING;
-
-
+const myClientId = process.env.MY_CLIENT_ID;
+const myClientSecret = process.env.MY_CLIENT_SECRET;
 
 const app = module.exports = express();
 const massive = require('massive');
 // const controller = require('./server/controllers/controllers')
+
+// var React = require('react');
+// var ReactDataGrid = require('react-data-grid/addons');
 
 
 app.use(cors());
@@ -36,17 +39,13 @@ app.use(passport.session())
 
 
 
-
-
-
-
 massive(connectionString).then((db) => {
   app.set('db', db);
 
   passport.use(new Auth0Strategy({
   domain: 'kelljohnson.auth0.com',
-  clientID: '6WxZOE2De3urWiTCtIOHUz1KR4W0rQMo',
-  clientSecret: 'svHK_4WiCh8EYcQ6bKhER0ultPGlR3h7jGz9myUdjKHWWWilKJkBMY8x-n2ps-X1',
+  clientID: process.env.MY_CLIENT_ID,
+  clientSecret: process.env.MY_CLIENT_SECRET,
   callbackURL: 'http://localhost:3005/auth/callback'
 }, function (accessToken, refreshToken, extraParams, profile, done) {
     console.log('profile',profile);
@@ -126,6 +125,15 @@ app.get('/me', (req, res, next) => {
     res.send(req.user.id)
   }
 });
+
+//get weight workouts from db
+app.get('/api/exercises', (req, res, next) => {
+  const dbInstance = req.app.get('db');
+  console.log(dbInstance)
+  dbInstance.getWeightWorkout([req.query.category])
+  .then( (weights) => res.status(200).send(weights))
+  .catch( () => res.status(500).send() );
+})
 
   // app.get('/api/user', controller.getUserProfile);
   // app.put('/api/editprofile', controller.updateProfile);

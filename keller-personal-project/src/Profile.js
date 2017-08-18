@@ -40,7 +40,10 @@ export default function Profile(props) {
             <div className="circle3"></div>
             <p className="add-pic">Add Progress Pic</p>
         </div>
-        <div className="recent-activity"></div>
+        <div className="recent-activity">
+            <h3>Recent Activity</h3> 
+        </div>
+               
         </div>
         <Switch>
               

@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './stylesheets/main.css';
 import {HashRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import App from './App';
+import 'bootstrap/dist/css/bootstrap.css';
+
 // import Workouts from './Workouts';
 // import registerServiceWorker from './registerServiceWorker';
 

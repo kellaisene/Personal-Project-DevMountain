@@ -10,11 +10,11 @@ module.exports = {
   getOne: ( req, res, next ) => {
     const dbInstance = req.app.get('db');
 
-    dbInstance.read_workout_weights()
+    dbInstance.readWorkoutWeights()
       .then( user => res.status(200).send( user ) )
       .catch( () => res.status(500).send() );
 
-    dbInstance.read_workout_cardio()
+    dbInstance.readWorkoutCardio()
       .then( user => res.status(200).send(user))
       .catch( () => res.status(500).send());  
   },
@@ -30,7 +30,11 @@ module.exports = {
   update: ( req, res, next ) => {
     const dbInstance = req.app.get('db');
 
-    dbInstance.update_product()
+    dbInstance.update_weights()
+      .then( () => res.status(200).send() )
+      .catch( () => res.status(500).send() );
+
+    dbInstance.update_cardio()
       .then( () => res.status(200).send() )
       .catch( () => res.status(500).send() );
   },
