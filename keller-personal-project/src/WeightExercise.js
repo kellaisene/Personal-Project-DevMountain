@@ -121,7 +121,7 @@ export default function Workouts(props) {
       },
       {
         key: 'resttime',
-        name: 'Rest',
+        name: 'Rest (sec)',
         editable: true
       }
     ];
@@ -141,11 +141,12 @@ export default function Workouts(props) {
          <ReactDataGrid
         enableCellSelect={true}
         columns={columns}
-        minHeight={500}
+        minHeight={175}
         rowGetter={rowGetter}
         rowsCount={sets.length} 
         onGridRowsUpdated={handleGridRowsUpdated}
         rowHeight={35}
+        minWidth={500}
          />   
          </div>
 

@@ -17,7 +17,7 @@ body {
   background-size: cover;
   /*background: fixed;*/
   font-family: sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   height: 1000px; }
 
 /*.App-logo {
@@ -37,7 +37,11 @@ body {
   float: none;
   background-color: #222;
   height: 50px;
+  font-size: 25px;
   /*padding: 20px;*/ }
+
+.component-pages {
+  font-size: 20px; }
 
 nav {
   /*position: fixed;*/ }
@@ -106,6 +110,12 @@ ul {
   background-color: lightskyblue;
   margin-left: 47%; }
 
+.logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px; }
+
 .profile-page {
   height: 2000px;
   font-family: sans-serif;
@@ -119,12 +129,12 @@ ul {
 
 .profile-pic {
   width: 100%;
-  height: 260px;
+  height: 280px;
   background-image: url(http://www.crossfitnp.cz/sites/default/files/images/cinka.png);
   background-size: cover; }
 
 .page-header {
-  margin: 0px; }
+  font-size: 30px; }
 
 .links {
   display: flex;
@@ -218,19 +228,25 @@ ul {
   background-color: green; }
 
 .workout-page {
-  height: 1200px;
+  height: 2500px;
   width: 100%;
-  background-image: url(https://prod-academy-wp-content-uploads.s3.amazonaws.com/2015/12/Onnit-Academy-Workout-of-the-Day-37-Kettlebell-Workout.jpg); }
+  background-image: url(http://rcysl.com/wp-content/uploads/2017/02/Amazing-Plain-Black-Wallpaper-.jpg);
+  background-size: cover; }
 
 .workout-header {
   height: 160px;
   width: 100%;
-  margin-top: -25px;
-  color: white; }
+  margin-top: -8px;
+  padding-top: 40px;
+  color: white;
+  font-size: 50px; }
 
 .boxes {
   display: flex;
   justify-content: center; }
+
+.select-workout {
+  font-size: 30px; }
 
 h5 {
   display: flex;
@@ -240,8 +256,28 @@ h5 {
 
 .input-boxes {
   width: 1500px;
-  height: 900px;
-  background: rgba(255, 255, 255, 0.7); }
+  height: 2200px;
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+.select-category {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  border: solid; }
+
+li {
+  width: 495px;
+  border: solid 1px; }
+
+.select-workout-box {
+  width: 500px;
+  height: 95px;
+  background-color: rgba(255, 255, 255, 0.7); }
 
 .backbutton-format {
   display: flex;
@@ -266,16 +302,3 @@ h5 {
   width: 100%;
   background-color: goldenrod;
   margin-top: -25px; }
-
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%; }
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px; }
-
-tr:nth-child(even) {
-  background-color: #dddddd; }

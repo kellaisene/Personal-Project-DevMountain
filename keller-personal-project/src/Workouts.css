@@ -1,17 +1,23 @@
 .workout-page {
-  height: 1200px;
+  height: 2500px;
   width: 100%;
-  background-image: url(https://prod-academy-wp-content-uploads.s3.amazonaws.com/2015/12/Onnit-Academy-Workout-of-the-Day-37-Kettlebell-Workout.jpg); }
+  background-image: url(http://rcysl.com/wp-content/uploads/2017/02/Amazing-Plain-Black-Wallpaper-.jpg);
+  background-size: cover; }
 
 .workout-header {
   height: 160px;
   width: 100%;
-  margin-top: -25px;
-  color: white; }
+  margin-top: -8px;
+  padding-top: 40px;
+  color: white;
+  font-size: 50px; }
 
 .boxes {
   display: flex;
   justify-content: center; }
+
+.select-workout {
+  font-size: 30px; }
 
 h5 {
   display: flex;
@@ -21,8 +27,28 @@ h5 {
 
 .input-boxes {
   width: 1500px;
-  height: 900px;
-  background: rgba(255, 255, 255, 0.7); }
+  height: 2200px;
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+.select-category {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  border: solid; }
+
+li {
+  width: 495px;
+  border: solid 1px; }
+
+.select-workout-box {
+  width: 500px;
+  height: 95px;
+  background-color: rgba(255, 255, 255, 0.7); }
 
 .backbutton-format {
   display: flex;

@@ -22,3 +22,9 @@
   width: 100px;
   background-color: lightskyblue;
   margin-left: 47%; }
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px; }

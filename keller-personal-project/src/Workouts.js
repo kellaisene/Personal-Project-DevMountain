@@ -23,23 +23,26 @@ export default function Workouts(props) {
     return (
         <div className="workout-page">
             <div className="workout-header">
-                <h1>Workouts</h1>
+                Your Workouts
             </div>
 
             <div className="boxes">
             <div className="input-boxes">
-                <h5>Select a Workout</h5>
-                {/* <h5>Workout Name</h5>
-                <h5>Weight</h5>
-                <h5>Time</h5>
-                <h5>Rest Time</h5>
-                <h5>Set</h5> */}
-                
+                <div className="select-workout">Select a Workout</div>
+                <div className="select-workout-box">
+            <div className="select-category">
+               <Link to='/profile/workouts/exercise/upper'> <li>Upper Body</li></Link>
+               <Link to='/profile/workouts/exercise/lower'> <li>Lower Body</li></Link>
+               <Link to='/profile/workouts/exercise/cardio'> <li>Cardio</li></Link>
+            </div>
+                </div>
+                <div>
             <Route path='/profile/workouts/exercise/:category' render={(props) => (
                  <Category {...props} 
                       user_id={props.user_id}
                       />
                       )} /> 
+                </div>
             </div>
             <div className="workout-summary">
 

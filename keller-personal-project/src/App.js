@@ -55,10 +55,9 @@ class App extends Component {
               <Link to='/meals'>Meal Plans</Link>
             </ul>
           </div>
-          <div>
+          <div className='component-pages'>
               
 
-        </div>
                 <Route exact path='/home' component={Home} />   
            <Switch> 
                 <Route exact path='/profile' render={(props) => (
@@ -77,6 +76,7 @@ class App extends Component {
                 <Route path='/results' component={Results} />
                 <Route path='/meals' component={Meals} />   
             </Switch> 
+        </div>
           </div>
 
             <div style={{display: this.state.loggedin ? "none" : "block"}}>
