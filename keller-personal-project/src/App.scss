@@ -6,10 +6,11 @@
   text-align: center;
   background-image: url(https://cdn.gearpatrol.com/wp-content/uploads/2016/06/gear-patrol-stop-doing-this-at-gym-lead-full.jpg);  
   background-size: cover;
-  /*background: fixed;*/
-  font-family: sans-serif;
+  // position: fixed;
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
   font-size: 20px;
   height: 1000px;
+  font-weight: bold;
 }
 
 /*.App-logo {
@@ -28,17 +29,23 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;*/
-  /*position: fixed;*/
+  // position: fixed;
   float: none;
-  background-color: #222;
+  background: #4c4c4c; /* Old browsers */
   height: 50px;
   font-size: 25px;
   /*padding: 20px;*/
   
 }
 
+// .nav-bar {
+//   position: fixed;
+// }
+
 .component-pages {
   font-size: 20px;
+  // position: fixed;
+
 }
 
 nav{
@@ -67,20 +74,28 @@ ul{
 }
 
 .App-intro {
-  font-family: sans-serif;
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
   font-weight: 800;
-  font-size: 42px;
+  font-size: 70px;
   padding-top: 300px;
   margin-top: 0;
+  color: #000000;
+  
+}
+
+.maliu-mai {
+  background: rgba(255, 255,255, 0.7);
+  
 }
 
 .log-me-in {
   height: 50px;
   width: 100px;
-  background-color: lightskyblue;
-  font-family: 'Muli', sans-serif;
+  background-color: #337ab7;
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
   /* font-weight: 800; */
   font-size: 28px;
+  color: whitesmoke;
 }
 
 @keyframes App-logo-spin {
@@ -88,3 +103,4 @@ ul{
   to { transform: rotate(360deg); }
 }
 
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded');

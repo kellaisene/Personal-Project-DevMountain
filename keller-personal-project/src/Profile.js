@@ -17,7 +17,7 @@ export default function Profile(props) {
                     height={200}
                     width={200}/>
 
-                <h4 className="page-header">{props.name}</h4>
+                <div className="page-header">{props.name}</div>
             </div>
         <div className="links">
         <div className="box1">
@@ -26,7 +26,7 @@ export default function Profile(props) {
             <div className="circle1"></div>
              </Link> 
 
-            <p className="start-workout">Start Workout</p>
+            <p className="start-workout">START Workout</p>
         </div>
         <div className="box2">
 
@@ -34,15 +34,15 @@ export default function Profile(props) {
             <div className="circle2"></div>
             </Link>
 
-            <p className="update-measurements">Update Measurements</p>
+            <p className="update-measurements">UPDATE Measurements</p>
         </div>
         <div className="box3">
             <div className="circle3"></div>
-            <p className="add-pic">Add Progress Pic</p>
+            <p className="add-pic">ADD Progress Pic</p>
         </div>
-        <div className="recent-activity">
+        {/* <div className="recent-activity">
             <h3>Recent Activity</h3> 
-        </div>
+        </div> */}
                
         </div>
         <Switch>

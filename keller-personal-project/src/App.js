@@ -11,6 +11,10 @@ import Results from './Results';
 import Meals from './Meals';
 // import './App.css';
 import router from './router';
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import ReactFontFace from 'react-font-face';
+
+
 
 // import server from './server';
 
@@ -54,7 +58,6 @@ class App extends Component {
               <Link to='/results'>Results Tracker</Link>
               <Link to='/meals'>Meal Plans</Link>
             </ul>
-          </div>
           <div className='component-pages'>
               
 
@@ -78,10 +81,13 @@ class App extends Component {
             </Switch> 
         </div>
           </div>
+          </div>
 
             <div style={{display: this.state.loggedin ? "none" : "block"}}>
          <p className="App-intro">
+           <div className="maliu-mai">
           Welcome to your online Personal Trainer
+          </div>
           <p>
           <a href="http://localhost:3005/auth"><button className="log-me-in"> Login</button></a>
           </p>

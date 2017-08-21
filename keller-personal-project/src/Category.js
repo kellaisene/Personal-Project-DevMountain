@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import WeightExercise from './WeightExercise';
-
+import CardioExercise from './CardioExercise';
 import update from 'react-addons-update';
 
 
@@ -84,6 +84,21 @@ class Category extends Component {
               {workouts}
           </div>
       )
+
+    // var cardio = exercises.map((exercise, index) => {
+    //     return (
+    //         <CardioExercise
+    //             sets={exercise}
+    //             key={index}
+    //             handleGridRowsUpdated={this.handleGridRowsUpdated}
+    //             />
+    //     )
+    // }) 
+    // return(
+    //     <div>
+    //         {cardio}
+    //         </div>
+    // ) 
   }
 }
 

@@ -148,7 +148,9 @@ export default function Workouts(props) {
         rowHeight={35}
         minWidth={500}
          />   
+          <button>SUBMIT WORKOUT </button>
          </div>
+
 
         // <table>
         //     <tr>

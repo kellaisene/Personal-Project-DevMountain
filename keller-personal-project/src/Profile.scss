@@ -1,11 +1,11 @@
 .profile-page {
-  height: 2000px;
+  height: 980px;
   font-family: sans-serif;
   font-weight: 800;
   font-size: 42px;
-  color: black;
-  /* background-image: url('http://www.superiorwallpapers.com/download/dumbbells-in-a-gym-1920x1200.jpg'); */
+  background-image: url('http://cdn.wallpapersafari.com/17/78/qF3tCd.jpg');
   background-size: cover; 
+//   background-color: #337ab7;
   text-align: center;
   color: white;
 
@@ -13,15 +13,22 @@
 
 .profile-pic {
     width: 100%;
-    height: 280px;
+    height: 290px;
     background-image: url(http://www.crossfitnp.cz/sites/default/files/images/cinka.png);
     background-size: cover;
 
 }
 
 .page-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin-top: 0px;
+    font-family: 'Encode Sans Semi Expanded', sans-serif;
     font-size: 30px;
-
+    background: rgba(255, 255,255, 0.7);
+   
 }
 
 .links {
@@ -39,7 +46,7 @@
     flex-direction: column;
     height: 400px;
     width: 400px;
-    background: lightgray;
+    background: #337ab7;
     border: 1px solid black;
 }
 
@@ -49,12 +56,15 @@
     // border-radius: 50%;
     background-image: url(http://icons.iconarchive.com/icons/icons8/ios7/128/Sports-Dumbbell-icon.png);
     background-size: cover;
+    // background-color: #337ab7;
+
 }
 
 .start-workout{
     display: flex;
     align-items: flex-end;
-    font-size: 20px
+    font-size: 20px;
+    font-family: 'Encode Sans Semi Expanded', sans-serif;
 }
 
 .box2 {
@@ -64,7 +74,7 @@
     flex-direction: column;
     height: 400px;
     width: 400px;
-    background: lightgray;
+    background: #337ab7;
     border: 1px solid black;
 }
 
@@ -78,6 +88,7 @@
 
 .update-measurements {
     font-size: 20px;
+    font-family: 'Encode Sans Semi Expanded', sans-serif;
 }
 
 .box3 {
@@ -87,7 +98,7 @@
     flex-direction: column;
     height: 400px;
     width: 400px;
-    background: lightgray;
+    background: #337ab7;
     border: 1px solid black;
 }
 
@@ -101,6 +112,7 @@
 
 .add-pic {
     font-size: 20px;
+    font-family: 'Encode Sans Semi Expanded', sans-serif;
 }
 
 
@@ -115,8 +127,9 @@
 .recent-activity {
     height: 700px;
     width: 1200px;
-    background: darkgray;
+    background: #707070;
     margin-top: 100px;
     border: 1px solid black;
+    font-family: 'Encode Sans Semi Expanded', sans-serif;
 }
 
