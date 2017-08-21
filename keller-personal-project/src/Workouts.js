@@ -4,7 +4,8 @@ import Category from './Category';
 
 
 export default function Workouts(props) {
-    
+    console.log("workouts", props.user_id)
+    let test = props.user_id
     return (
         <Router>
         <div className="workout-page">
@@ -17,19 +18,21 @@ export default function Workouts(props) {
                 <div className="select-workout">Select a Workout</div>
                 <div className="select-workout-box">
             <div className="select-category">
-                {/* <Switch> */}
+               
                <Link to='/profile/workouts/exercise/upper'> <li>Upper Body</li></Link>
                <Link to='/profile/workouts/exercise/lower'> <li>Lower Body</li></Link>
                <Link to='/profile/workouts/exercise/cardio'> <li>Cardio</li></Link>
-               {/* </Switch> */}
+              
             </div>
                 </div>
                 <div>
-            <Route path='/profile/workouts/exercise/:category' render={(props) => (
+            <Route exact path='/profile/workouts/exercise/:category' render={(props) => (
+                    
                  <Category {...props} 
-                      user_id={props.user_id}
+                     user_id = {test}
                       />
-                      )} /> 
+                      
+                      )} />
                 </div>
             </div>
             <div className="workout-summary">

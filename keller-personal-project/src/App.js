@@ -47,13 +47,14 @@ class App extends Component {
     // const weights = this.props.weights.map((weight, i) => (
     //   <div key={i}>{weight.name}</div>
     // ))
+    // console.log(this.state)
     return (
       <Router>
       <div style={{background: this.state.loggedin ? "none" : true}}className="App">
         <div style={{display: this.state.loggedin ? "block" : "none"}} className="App-header">
           <div className="nav-bar">
             <ul>
-              <Link to='/home'>Home</Link>
+              <Link to='/home'>Home </Link>
               <Link to='/profile'>Profile</Link>
               <Link to='/results'>Results Tracker</Link>
               <Link to='/meals'>Meal Plans</Link>
@@ -68,6 +69,7 @@ class App extends Component {
                       profile_pic={this.state.loggedin.profile_pic}
                       name={this.state.loggedin.name} 
                       gender={this.state.loggedin.gender}
+                      user_id={this.state.loggedin.user_id}
                       />
                       )} /> 
                 <Route path='/profile/workouts' render={(props) => (

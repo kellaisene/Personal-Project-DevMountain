@@ -5,7 +5,7 @@ import ReactDataGrid from 'react-data-grid';
 
 
 export default function Workouts(props) {
-    console.log(props)
+    // console.log(props)
 
 //     const Example = React.createClass({
 //   getInitialState() {
@@ -126,7 +126,7 @@ export default function Workouts(props) {
       }
     ];
     var sets = props.sets;
-    console.log(sets)
+    // console.log(sets)
     function rowGetter(i) {
         return sets[i];
     } 
@@ -148,7 +148,7 @@ export default function Workouts(props) {
         rowHeight={35}
         minWidth={500}
          />   
-          <button>SUBMIT WORKOUT </button>
+          
          </div>
 
 

@@ -2,6 +2,7 @@ import React from 'react';
 import {HashRouter, Switch, Route, Link} from 'react-router-dom';
 import Workouts from './Workouts';
 import Measurements from './Measurements';
+import AddPics from './AddPics';
 // import './Profile.css';
 
 
@@ -37,7 +38,9 @@ export default function Profile(props) {
             <p className="update-measurements">UPDATE Measurements</p>
         </div>
         <div className="box3">
+            <Link to='/profile/addpics' >
             <div className="circle3"></div>
+            </Link>
             <p className="add-pic">ADD Progress Pic</p>
         </div>
         {/* <div className="recent-activity">
