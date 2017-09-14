@@ -1,8 +1,8 @@
 import React from 'react';
-import {HashRouter, Switch, Route, Link} from 'react-router-dom';
-import Workouts from './Workouts';
-import Measurements from './Measurements';
-import AddPics from './AddPics';
+import {HashRouter, Switch, Link} from 'react-router-dom';
+// import Workouts from './Workouts';
+// import Measurements from './Measurements';
+// import AddPics from './AddPics';
 // import './Profile.css';
 
 
@@ -16,7 +16,8 @@ export default function Profile(props) {
             <div className="profile-pic">
                 <img src={props.profile_pic} 
                     height={200}
-                    width={200}/>
+                    width={200}
+                    />
 
                 <div className="page-header">{props.name}</div>
             </div>

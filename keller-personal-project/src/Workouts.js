@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {HashRouter as Router, Route, Link, Switch} from 'react-router-dom';
+import React from 'react';
+import {HashRouter as Router, Route, Link} from 'react-router-dom';
 import Category from './Category';
 
 

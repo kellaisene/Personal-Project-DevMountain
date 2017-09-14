@@ -15,7 +15,7 @@
           </p>
         </p>   
         <div className="logout">
-           <a href="https://kelljohnson.auth0.com/v2/logout"><button className="logout-button">Log Out</button></a>
+           <a href="https://kelljohnson.auth0.com/logout"><button className="logout-button">Log Out</button></a>
         </div>
        {/* </div>  */}
     </div>

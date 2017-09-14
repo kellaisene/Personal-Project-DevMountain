@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import {HashRouter as Router, Route, Link, Switch} from 'react-router-dom';
 import axios from 'axios';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import Home from './Home';
 import Profile from './Profile';
-import Welcome from './Welcome';
+// import Welcome from './Welcome';
 import Workouts from './Workouts';
 import Measurements from './Measurements';
 import Results from './Results';
 import Meals from './Meals';
 // import './App.css';
-import router from './router';
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
-import ReactFontFace from 'react-font-face';
+// import router from './router';
+// import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+// import ReactFontFace from 'react-font-face';
 
 
 
@@ -28,7 +28,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      loggedin: [],
+      loggedin: '',
       weights: {}
     };
   }
@@ -91,7 +91,7 @@ class App extends Component {
           Welcome to your online Personal Trainer
           </div>
           <p>
-          <a href="http://localhost:3005/auth"><button className="log-me-in"> Login</button></a>
+          <a href={process.env.REACT_APP_LOGIN}><button className="log-me-in"> Login</button></a>
           </p>
         </p>  
       </div>    

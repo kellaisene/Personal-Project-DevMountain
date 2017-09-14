@@ -46,7 +46,7 @@ massive(connectionString).then((db) => {
     domain: 'kelljohnson.auth0.com',
     clientID: process.env.MY_CLIENT_ID,
     clientSecret: process.env.MY_CLIENT_SECRET,
-    callbackURL: 'http://localhost:3005/auth/callback'
+    callbackURL: '/auth/callback'
   }, function (accessToken, refreshToken, extraParams, profile, done) {
     console.log('profile', profile);
 
@@ -78,7 +78,7 @@ massive(connectionString).then((db) => {
 
   app.get('/auth', passport.authenticate('auth0'));
   app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:3000/#/profile',
+    successRedirect: '/#/profile',
   }));
   app.get('/me', (req, res) => {
     console.log(req.user, 'this is req.user');
@@ -87,7 +87,7 @@ massive(connectionString).then((db) => {
 
   app.get('/getuser', (req, res) => {
     // console.log('req.user', req.user)
-
+    console.log("server is working")
     if (req.user) { //creating an object for us to call and use
       var user = {
         'user_id': req.user.user_id,
@@ -176,7 +176,7 @@ massive(connectionString).then((db) => {
 // app.delete('/api/removeTrip/:id', controller.removeTrip);
 // app.delete('/api/removeSquad/:id', controller.removeSquad);
 
-// const path = require('path')
+
 // app.get('*', (req, res)=>{
 //   res.sendFile(path.join(__dirname, '..','build','index.html'));
 // })
