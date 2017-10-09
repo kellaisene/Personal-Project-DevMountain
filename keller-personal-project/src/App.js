@@ -94,6 +94,9 @@ class App extends Component {
           <a href={process.env.REACT_APP_LOGIN}><button className="log-me-in"> Login</button></a>
           </p>
         </p>  
+        <p >For guest login use email:</p>
+        <p >uguest520@gmail.com</p>
+        <p >password: guest123</p>
       </div>    
       </div>
 
